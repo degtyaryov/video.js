@@ -3,8 +3,19 @@ CHANGELOG
 
 ## HEAD (Unreleased)
 * @PeterDaveHello added a Traditional Chinese translation ([view](https://github.com/videojs/video.js/pull/1729))
+* @mmcc updated the hide/show functions to use a class instead of inline styles ([view](https://github.com/videojs/video.js/pull/1681))
+* @mister-ben added better handling of the additional videojs() arguments when the player is already initialized ([view](https://github.com/videojs/video.js/pull/1730))
+* @anhskohbo added a Vietnamese translation ([view](https://github.com/videojs/video.js/pull/1734))
+* @Sxmanek added a Czech translation ([view](https://github.com/videojs/video.js/pull/1739))
+* @jcaron23 added the vjs-scrubbing CSS class and prevented menus from showing while scrubbing ([view](https://github.com/videojs/video.js/pull/1741))
+* @dmlap fixed URL parsing in IE9 ([view](https://github.com/videojs/video.js/pull/1765))
 
 --------------------
+
+## 4.11.3 (2014-12-19)
+* @gdkraus fixed a bug where you could no longer tab-navigate passed a menu button ([view](https://github.com/videojs/video.js/pull/1760))
+* @matteos exported the setSource functions so source handlers will work in the minified version ([view](https://github.com/videojs/video.js/pull/1753))
+* @matteos fixed RTMP playback ([view](https://github.com/videojs/video.js/pull/1755))
 
 ## 4.11.2 (2014-12-17)
 * @mmcc fixed a bug where the playback rate menu would not open ([view](https://github.com/videojs/video.js/pull/1716))
