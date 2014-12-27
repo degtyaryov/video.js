@@ -302,6 +302,7 @@ vjs.Player.prototype.createEl = function(){
   this.on(['canplay', 'canplaythrough', 'playing', 'ended'], this.onWaitEnd);
   this.on('seeking', this.onSeeking);
   this.on('seeked', this.onSeeked);
+  this.on('seeking_not_support', this.onSeekingNotSupport);
   this.on('ended', this.onEnded);
   this.on('play', this.onPlay);
   this.on('firstplay', this.onFirstPlay);
@@ -484,6 +485,19 @@ vjs.Player.prototype.onSeeking = function(){
  */
 vjs.Player.prototype.onSeeked = function(){
   this.removeClass('vjs-seeking');
+};
+
+/**
+ * Fired when no metadata for pseudo-streaming
+ * @event seeked
+ */
+vjs.Player.prototype.onSeekingNotSupport = function(){
+    this.setTimeout( function() {
+      this.error({ code: 4, message: this.localize(this.options()['notSupportedSeeking']) });
+    }, 0);
+    this.setTimeout( function() {
+      this.error(null);
+    }, 3000);
 };
 
 /**

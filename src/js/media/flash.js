@@ -63,6 +63,11 @@ vjs.Flash = vjs.MediaTechController.extend({
         }, options['attributes'])
     ;
 
+    // PseudoStreaming parameters
+    if( options['pseudoStreamStartParam']) {
+        flashVars['pseudoStreamStartParam'] = options['pseudoStreamStartParam'];
+    }
+
     // If source was supplied pass as a flash var.
     if (source) {
       this.ready(function(){
@@ -246,8 +251,6 @@ vjs.Flash.nativeSourceHandler.canHandleSource = function(source){
   if (type in vjs.Flash.formats) {
     return 'maybe';
   }
-
-  return '';
 };
 
 /**

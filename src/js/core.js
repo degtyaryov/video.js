@@ -122,7 +122,8 @@ vjs.options = {
   'languages': {},
 
   // Default message to show when a video cannot be played.
-  'notSupportedMessage': 'No compatible source was found for this video.'
+  'notSupportedMessage': 'No compatible source was found for this video.',
+  'notSupportedSeeking': 'Seeking for this video is not supported.'
 };
 
 // Set CDN Version of swf
